@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgc"
+    tools:context=".Activity_inicio">
+
+
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="194dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/etfondo"
+        android:ems="10"
+        android:hint="   Buscar"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_usuario"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/usuario"
+        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_inicioPanel"
+        android:layout_width="340dp"
+        android:layout_height="152dp"
+        android:layout_marginTop="152dp"
+        android:background="@drawable/panelinicio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Bienvenido, USER!"
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+    <TextView
+        android:id="@+id/lbl_historial"
+        android:layout_width="292dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="36dp"
+        android:text="Historial de registros"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/lbl_inicioPanel"
+        app:layout_constraintTop_toTopOf="@+id/lbl_inicioPanel" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="200dp"
+        android:layout_marginBottom="37dp"
+        android:background="@drawable/historial"
+        app:layout_constraintBottom_toBottomOf="@+id/lbl_inicioPanel"
+        app:layout_constraintEnd_toEndOf="@+id/lbl_inicioPanel"
+        app:layout_constraintHorizontal_bias="0.274"
+        app:layout_constraintStart_toStartOf="@+id/lbl_inicioPanel"
+        app:layout_constraintTop_toTopOf="@+id/lbl_inicioPanel"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/lbl_tabla"
+        android:layout_width="296dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="36dp"
+        android:text="Tabla de datos"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/lbl_inicioPanel"
+        app:layout_constraintTop_toTopOf="@+id/lbl_inicioPanel" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="163dp"
+        android:layout_marginEnd="260dp"
+        android:background="@drawable/iconoproyecto"
+        app:layout_constraintBottom_toBottomOf="@+id/lbl_inicioPanel"
+        app:layout_constraintEnd_toEndOf="@+id/lbl_inicioPanel"
+        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintStart_toStartOf="@+id/lbl_inicioPanel"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.114" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="17dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/flecha"
+        app:layout_constraintEnd_toEndOf="@+id/lbl_tabla"
+        app:layout_constraintTop_toTopOf="@+id/lbl_inicioPanel" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="17dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/flecha"
+        app:layout_constraintEnd_toEndOf="@+id/lbl_tabla"
+        app:layout_constraintTop_toTopOf="@+id/lbl_inicioPanel" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/buscar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/opciones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="406dp"
+        android:layout_height="530dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/p2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_inicioPanel"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RelativeLayout
+        android:layout_width="394dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView11">
+
+        <lecho.lib.hellocharts.view.LineChartView
+            android:id="@+id/chart"
+            android:layout_width="wrap_content"
+            android:layout_height="333dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="152dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/lbl_tituloGrafica"
+        android:layout_width="332dp"
+        android:layout_height="31dp"
+        android:fontFamily="@font/montserrat"
+        android:text="HORAS TRABAJADAS EN EL AÑO"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#0B0B0B"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView11" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

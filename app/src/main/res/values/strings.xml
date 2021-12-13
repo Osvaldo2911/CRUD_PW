@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">CRUD_TBD</string>
+
+    <string name="lbl_logoNombre">AMPRICE</string>
+    <string name="lbl_nombreLogin">LOGIN</string>
+    <string name="hint_Email">Correo electronico</string>
+    <string name="hint_Contra">Contraseña</string>
+    <string name="btn_IniciarSesion">Iniciar Sesion</string>
+    <string name="rb_recordar">Recordarme</string>
+    <string name="lbl_olvide">Olvidaste tu contraseña?</string>
+    <string name="lbl_crear">Crea una cuenta</string>
+    <string name="title_activity_inicio">Activity_Inicio</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>

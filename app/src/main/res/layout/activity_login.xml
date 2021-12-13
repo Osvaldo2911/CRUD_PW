@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view_Login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgc"
+    tools:context=".Activity_login">
+
+    <TextView
+        android:id="@+id/lbl_nbeL1"
+        android:layout_width="161dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="316dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/nbe"
+        android:rotation="13"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_logoL"
+        android:layout_width="136dp"
+        android:layout_height="143dp"
+        android:background="@drawable/lgc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_nombreLogin" />
+
+    <EditText
+        android:id="@+id/et_ps_contra"
+        android:layout_width="347dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/etfondo"
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:hint="@string/hint_Contra"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_User" />
+
+    <TextView
+        android:id="@+id/lbl_ovidecontra"
+        android:layout_width="204dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/lbl_olvide"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_ps_contra" />
+
+    <TextView
+        android:id="@+id/lbl_nombreLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/lbl_nombreLogin"
+        android:textColor="#FFFFFF"
+        android:textSize="48sp"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_User"
+        android:layout_width="346dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/etfondo"
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:hint="@string/hint_Email"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_logoL" />
+
+    <Button
+        android:id="@+id/btn_iniciar"
+        android:layout_width="200dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="84dp"
+        android:fontFamily="@font/montserrat"
+        android:onClick="@string/title_activity_inicio"
+        android:text="@string/btn_IniciarSesion"
+        android:textAlignment="center"
+        android:textColorHighlight="#3F51B5"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_ps_contra" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="141dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/rb_recordar"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/lbl_ovidecontra"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_ps_contra" />
+
+    <TextView
+        android:id="@+id/lbl_nbeL2"
+        android:layout_width="152dp"
+        android:layout_height="69dp"
+        android:layout_marginEnd="332dp"
+        android:layout_marginBottom="56dp"
+        android:background="@drawable/nbe"
+        android:rotation="6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_creaCuenta"
+        android:layout_width="136dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Crea una cuenta"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_iniciar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

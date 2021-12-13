@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgc"
+    tools:context=".Activity_datos">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_datos"
+        android:layout_width="390dp"
+        android:layout_height="749dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/paneldatos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_filtros">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_datosTabla"
+            android:layout_width="390dp"
+            android:layout_height="710dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/lbl_usuario2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/usuario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_Float_Agregar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        android:onClick="agregarEmpleado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/agrega2" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="194dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/etfondo"
+        android:ems="10"
+        android:hint="   Buscar"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.356"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/buscar"
+        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_Regresar"
+        android:layout_width="22dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/flecha"
+        android:clickable="true"
+        android:rotation="180"
+        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName2"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_filtros"
+        android:layout_width="75dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="261dp"
+        android:clickable="true"
+        android:fontFamily="@font/montserrat"
+        android:text="Filtros"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+
+    <TextView
+        android:id="@+id/lbl_f_icono"
+        android:layout_width="11dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="217dp"
+        android:background="@drawable/flecha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/lbl_filtros"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_f_opciones"
+        android:layout_width="400dp"
+        android:layout_height="159dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_filtros">
+
+        <TextView
+            android:id="@+id/lbl_f_dir"
+            android:layout_width="85dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/filtrob"
+            android:clickable="true"
+            android:fontFamily="@font/montserrat"
+            android:text="Direccion"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_f_fn" />
+
+        <TextView
+            android:id="@+id/lbl_f_sex"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/filtrob"
+            android:clickable="true"
+            android:fontFamily="@font/montserrat"
+            android:text="Sexo"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lbl_f_dni"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_f_fn" />
+
+        <TextView
+            android:id="@+id/lbl_f_suel"
+            android:layout_width="71dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/filtrob"
+            android:clickable="true"
+            android:fontFamily="@font/montserrat"
+            android:text="Sueldo"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lbl_f_dno"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_f_am" />
+
+        <TextView
+            android:id="@+id/lbl_f_sdni"
+            android:layout_width="90dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/filtrob"
+            android:clickable="true"
+            android:fontFamily="@font/montserrat"
+            android:text="Super DNI"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/lbl_f_ap"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lbl_f_fn"
+            android:layout_width="177dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/filtrob"
+            android:clickable="true"
+            android:fontFamily="@font/montserrat"
+            android:text="Fecha de nacimiento"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_f_nom" />
+
+        <TextView
+            android:id="@+id/lbl_f_dno"
+            android:layout_width="41dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/filtrob"
+            android:clickable="true"
+            android:fontFamily="@font/montserrat"
+            android:text="DNO"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lbl_f_sex"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_f_am" />
+
+        <TextView
+            android:id="@+id/lbl_f_dni"
+            android:layout_width="41dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/filtrob"
+            android:clickable="true"
+            android:fontFamily="@font/montserrat"
+            android:text="DNI"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lbl_f_dir"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_f_fn" />
+
+        <TextView
+            android:id="@+id/lbl_f_am"
+            android:layout_width="168dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/filtrob"
+            android:clickable="true"
+            android:fontFamily="@font/montserrat"
+            android:text="Apellido materno"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/lbl_f_fn"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_f_sdni" />
+
+        <TextView
+            android:id="@+id/lbl_f_ap"
+            android:layout_width="146dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/filtrob"
+            android:clickable="true"
+            android:fontFamily="@font/montserrat"
+            android:text="Apellido paterno"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/lbl_f_nom"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lbl_f_nom"
+            android:layout_width="90dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/filtrob"
+            android:clickable="true"
+            android:fontFamily="@font/montserrat"
+            android:text="Nombre"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
