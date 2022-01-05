@@ -1,4 +1,4 @@
-package com.example.crud_tbd;
+package com.example.crud_pw;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -121,18 +121,13 @@ public class Activity_agregar extends AppCompatActivity {
                 if (!nom.equals("")) {
                     if (!aps.equals("")) {
 
-                        if (!clNos.equals("")) {
-                            new Thread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    conexion.clienteDAO().clModificar(clNos);
-                                }
-                            });
+                        if (true) {
+
                             if (!(tels.equals(""))) {
                                 if (!(rmxs.equals(""))) {
                                     //--------------------------------------------------
                                     if (rbf.isChecked()){
-                                        conexion.clienteDAO().insertarCliente(new ClienteT(clNos, noms, aps, tels, "flat", rmxs));
+                                      //  conexion.clienteDAO().insertarCliente(new ClienteT(clNos, noms, aps, tels, "H", rmxs));
                                         new Thread(new Runnable() {
                                             @Override
                                             public void run() {
@@ -145,7 +140,7 @@ public class Activity_agregar extends AppCompatActivity {
                                             }
                                         }).start();
                                     }else{
-                                        conexion.clienteDAO().insertarCliente(new ClienteT(clNos, noms, aps, tels, "house", rmxs));
+                                       // conexion.clienteDAO().insertarCliente(new ClienteT(clNos, noms, aps, tels, "M", rmxs));
                                         new Thread(new Runnable() {
                                             @Override
                                             public void run() {

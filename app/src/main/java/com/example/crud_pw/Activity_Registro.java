@@ -1,4 +1,4 @@
-package com.example.crud_tbd;
+package com.example.crud_pw;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -146,8 +146,8 @@ public class Activity_Registro extends AppCompatActivity implements View.OnTouch
                                 }
                             }
                             if (aceptar==true){
-                                busqueda = conexion.usuarioDAO().usuarioDisponible(email);
-                                if (busqueda == null) {
+                                //busqueda = conexion.usuarioDAO().usuarioDisponible(email);
+                                if (true) {
                                     new Thread(new Runnable() {
                                         @Override
                                         public void run() {

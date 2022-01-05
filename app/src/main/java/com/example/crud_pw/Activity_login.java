@@ -1,4 +1,4 @@
-package com.example.crud_tbd;
+package com.example.crud_pw;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,7 +12,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import ConexionBD.Conexion;
-import Modelo.UsuarioT;
 
 public class Activity_login extends AppCompatActivity implements View.OnTouchListener {
     TextView a;

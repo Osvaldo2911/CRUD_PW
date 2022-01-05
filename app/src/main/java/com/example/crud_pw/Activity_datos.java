@@ -1,4 +1,4 @@
-package com.example.crud_tbd;
+package com.example.crud_pw;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -12,7 +12,6 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.Arrays;
 import java.util.List;
 
 import ConexionBD.AdaptadorRegistros;
