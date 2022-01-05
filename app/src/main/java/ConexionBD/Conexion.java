@@ -1,18 +1,11 @@
 package ConexionBD;
 
 import android.content.Context;
-import android.view.LayoutInflater;
-import android.view.ViewGroup;
-import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
-
-import com.example.crud_tbd.R;
 
 import DAO.clienteDAO;
 import DAO.historialDAO;
