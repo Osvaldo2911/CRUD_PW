@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.crud_tbd">
+    package="com.example.crud_pw">
 
     <application
         android:allowBackup="true"
@@ -10,22 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CRUD_TBD">
         <activity
-            android:name=".Activity_agregar"
+            android:name="com.example.crud_pw.Activity_agregar"
             android:exported="false" />
         <activity
-            android:name=".Activity_datos"
+            android:name="com.example.crud_pw.Activity_datos"
             android:exported="false" />
         <activity
-            android:name=".Activity_inicio"
+            android:name="com.example.crud_pw.Activity_inicio"
             android:exported="false" />
         <activity
-            android:name=".Activity_Registro"
+            android:name="com.example.crud_pw.Activity_Registro"
             android:exported="false" />
         <activity
-            android:name=".Activity_login"
+            android:name="com.example.crud_pw.Activity_login"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.crud_pw.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
