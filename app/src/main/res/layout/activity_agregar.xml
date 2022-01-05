@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/bgc"
     android:backgroundTintMode="add"
-    android:onClick="modificar"
     tools:context=".Activity_agregar">
 
     <TextView
@@ -84,6 +83,7 @@
         android:background="@drawable/etfondo"
         android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
         android:ems="10"
+        android:enabled="false"
         android:hint="@string/hint_clID"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -215,7 +215,7 @@
         android:digits="1234567890"
         android:ems="10"
         android:hint="@string/text_rmax"
-        android:inputType="number"
+        android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
