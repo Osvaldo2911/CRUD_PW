@@ -11,6 +11,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import ConexionBD.Conexion;
+import Modelo.UsuarioT;
+
 public class Activity_login extends AppCompatActivity implements View.OnTouchListener {
     TextView a;
     EditText user,contra;
@@ -33,45 +36,63 @@ public class Activity_login extends AppCompatActivity implements View.OnTouchLis
         contra = findViewById(R.id.et_ps_contra);
         iniciar = findViewById(R.id.btn_iniciar);
 
-        iniciarSesion.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                int n = 0;
-                if (!(user.getText().toString().trim().equals(""))){
-                    n= n+1;
-                }
-                if (!(user.getText().toString().trim().equals(""))){
-                    n= n+1;
-                }
-                if (n==2){
-                    //Inicio de la aplicacion
-                        Toast.makeText(getApplicationContext(),
-                                "Inicio con exito",
-                                Toast.LENGTH_LONG)
-                                .show();
-                        //-------------------------- habre nueva ventana
-                            inicio(v);
-
-                        //--------------------------
-
-
-                        n=0;
-                }else{
-                    Toast.makeText(getApplicationContext(),
-                            "Inicio fallido",
-                            Toast.LENGTH_LONG)
-                            .show();
-                    n=0;
-                }
-            }
-        });
-
-        //-------------------
-
     }
 
         public void inicio(View v){
             Intent i = new Intent(this,Activity_inicio.class);
-            startActivity(i);
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    Conexion conexion = Conexion.gettAppDatabase(getBaseContext());
+
+        String userid = user.getText().toString().trim();
+        String contra2 = contra.getText().toString().trim();
+            if (!(userid.equals("")) && !(contra2.equals(""))){
+               //UsuarioT busqueda = conexion.usuarioDAO().usuarioLogin(userid,contra2);
+                if(true){
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    Toast.makeText(getBaseContext(), "Bienvenido", Toast.LENGTH_LONG).show();
+                                }
+                            });
+                        }
+                    }).start();
+                    startActivity(i);
+                }else{
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    Toast.makeText(getBaseContext(), "Correo o contraseña erroneos", Toast.LENGTH_LONG).show();
+                                }
+                            });
+                        }
+                    }).start();
+                }
+            }else {
+
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                Toast.makeText(getBaseContext(), "Rellena todos los campos", Toast.LENGTH_LONG).show();
+                            }
+                        });
+                    }
+                }).start();
+
+            }
+
+            } // end run Thread
+        }).start();
         }
 
 

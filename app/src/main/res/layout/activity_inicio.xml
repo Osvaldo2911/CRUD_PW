@@ -8,7 +8,6 @@
     tools:context=".Activity_inicio">
 
 
-
     <EditText
         android:id="@+id/editTextTextPersonName"
         android:layout_width="194dp"
@@ -16,7 +15,7 @@
         android:layout_marginTop="28dp"
         android:background="@drawable/etfondo"
         android:ems="10"
-        android:hint="   Buscar"
+        android:hint="@string/hint_buscar"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -53,7 +52,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/montserrat"
-        android:text="Bienvenido, USER!"
+        android:text="@string/text_bienvenido"
         android:textAllCaps="true"
         android:textColor="#000000"
         android:textSize="16sp"
@@ -67,7 +66,7 @@
         android:layout_height="27dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="36dp"
-        android:text="Historial de registros"
+        android:text="@string/text_historialR"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="16sp"
@@ -96,7 +95,7 @@
         android:layout_height="27dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="36dp"
-        android:text="Tabla de datos"
+        android:text="@string/text_tabla"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="16sp"
@@ -201,7 +200,7 @@
         android:layout_width="332dp"
         android:layout_height="31dp"
         android:fontFamily="@font/montserrat"
-        android:text="HORAS TRABAJADAS EN EL AÑO"
+        android:text="@string/text_horasT"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="#0B0B0B"

@@ -40,7 +40,7 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/usuario"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toEndOf="@+id/lbl_buscarBTN"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -56,13 +56,14 @@
         app:srcCompat="@drawable/agrega2" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/ed_busqueda_filtro"
         android:layout_width="194dp"
         android:layout_height="39dp"
         android:layout_marginTop="28dp"
         android:background="@drawable/etfondo"
         android:ems="10"
-        android:hint="   Buscar"
+        android:hint="@string/hint_buscar"
+        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.356"
@@ -70,13 +71,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/lbl_buscarBTN"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="28dp"
         android:background="@drawable/buscar"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName2"
+        android:clickable="true"
+        android:onClick="conaulta"
+        app:layout_constraintStart_toEndOf="@+id/ed_busqueda_filtro"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -87,7 +90,7 @@
         android:background="@drawable/flecha"
         android:clickable="true"
         android:rotation="180"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName2"
+        app:layout_constraintEnd_toStartOf="@+id/ed_busqueda_filtro"
         app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -101,14 +104,14 @@
         android:layout_marginEnd="261dp"
         android:clickable="true"
         android:fontFamily="@font/montserrat"
-        android:text="Filtros"
+        android:text="@string/text_filtro"
         android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/ed_busqueda_filtro" />
 
     <TextView
         android:id="@+id/lbl_f_icono"
@@ -120,7 +123,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/lbl_filtros"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/ed_busqueda_filtro" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_f_opciones"
@@ -141,7 +144,7 @@
             android:background="@drawable/filtrob"
             android:clickable="true"
             android:fontFamily="@font/montserrat"
-            android:text="Direccion"
+            android:text="@string/text_ptype"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="16sp"
@@ -149,44 +152,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lbl_f_fn" />
-
-        <TextView
-            android:id="@+id/lbl_f_sex"
-            android:layout_width="50dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="24dp"
-            android:background="@drawable/filtrob"
-            android:clickable="true"
-            android:fontFamily="@font/montserrat"
-            android:text="Sexo"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/lbl_f_dni"
-            app:layout_constraintTop_toBottomOf="@+id/lbl_f_fn" />
-
-        <TextView
-            android:id="@+id/lbl_f_suel"
-            android:layout_width="71dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="24dp"
-            android:background="@drawable/filtrob"
-            android:clickable="true"
-            android:fontFamily="@font/montserrat"
-            android:text="Sueldo"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/lbl_f_dno"
-            app:layout_constraintTop_toBottomOf="@+id/lbl_f_am" />
 
         <TextView
             android:id="@+id/lbl_f_sdni"
@@ -197,7 +162,7 @@
             android:background="@drawable/filtrob"
             android:clickable="true"
             android:fontFamily="@font/montserrat"
-            android:text="Super DNI"
+            android:text="@string/text_clNo"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="16sp"
@@ -214,51 +179,13 @@
             android:background="@drawable/filtrob"
             android:clickable="true"
             android:fontFamily="@font/montserrat"
-            android:text="Fecha de nacimiento"
+            android:text="@string/text_tel"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lbl_f_nom" />
-
-        <TextView
-            android:id="@+id/lbl_f_dno"
-            android:layout_width="41dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="24dp"
-            android:background="@drawable/filtrob"
-            android:clickable="true"
-            android:fontFamily="@font/montserrat"
-            android:text="DNO"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/lbl_f_sex"
-            app:layout_constraintTop_toBottomOf="@+id/lbl_f_am" />
-
-        <TextView
-            android:id="@+id/lbl_f_dni"
-            android:layout_width="41dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="24dp"
-            android:background="@drawable/filtrob"
-            android:clickable="true"
-            android:fontFamily="@font/montserrat"
-            android:text="DNI"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/lbl_f_dir"
-            app:layout_constraintTop_toBottomOf="@+id/lbl_f_fn" />
 
         <TextView
             android:id="@+id/lbl_f_am"
@@ -269,7 +196,7 @@
             android:background="@drawable/filtrob"
             android:clickable="true"
             android:fontFamily="@font/montserrat"
-            android:text="Apellido materno"
+            android:text="@string/text_rmax"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="16sp"
@@ -286,7 +213,7 @@
             android:background="@drawable/filtrob"
             android:clickable="true"
             android:fontFamily="@font/montserrat"
-            android:text="Apellido paterno"
+            android:text="@string/text_ap"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="16sp"
@@ -303,7 +230,7 @@
             android:background="@drawable/filtrob"
             android:clickable="true"
             android:fontFamily="@font/montserrat"
-            android:text="Nombre"
+            android:text="@string/hint_Nombre"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="16sp"

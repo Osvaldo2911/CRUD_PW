@@ -6,7 +6,61 @@
     android:layout_height="match_parent"
     android:background="@drawable/bgc"
     android:backgroundTintMode="add"
+    android:onClick="modificar"
     tools:context=".Activity_agregar">
+
+    <TextView
+        android:id="@+id/lbl_EditarAE"
+        android:layout_width="33dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="272dp"
+        android:layout_marginTop="84dp"
+        android:background="@drawable/lblanco"
+        android:clickable="true"
+        android:onClick="modificar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_clientNOBusqueda"
+        android:layout_width="142dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="72dp"
+        android:background="@drawable/etfondo"
+        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+        android:ems="10"
+        android:hint="@string/hint_clID"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.027"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_titulo" />
+
+    <TextView
+        android:id="@+id/lbl_EliminarAE"
+        android:layout_width="38dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/bblanco"
+        android:clickable="true"
+        android:onClick="borrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_BusquedaAgregar"
+        android:layout_width="33dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="228dp"
+        android:layout_marginTop="84dp"
+        android:background="@drawable/buscar"
+        android:clickable="true"
+        android:onClick="buscar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/lbl_RegresarAgregar"
@@ -21,165 +75,168 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/et_nombreAgregar"
+        android:id="@+id/et_clientNO"
         android:layout_width="250dp"
         android:layout_height="40dp"
         android:layout_marginStart="71dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="68dp"
         android:layout_marginEnd="72dp"
         android:background="@drawable/etfondo"
+        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
         android:ems="10"
-        android:hint="   Nombre"
+        android:hint="@string/hint_clID"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/lbl_titulo" />
 
-    <EditText
-        android:id="@+id/et_nombreAgregar4"
+    <Button
+        android:id="@+id/btn_ModificarCliente"
         android:layout_width="250dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="75dp"
-        android:background="@drawable/etfondo"
-        android:ems="10"
-        android:hint="   Sueldo"
-        android:inputType="number"
+        android:layout_height="50dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="132dp"
+        android:layout_marginEnd="73dp"
+        android:fontFamily="@font/montserrat"
+        android:onClick="ModificarCliente"
+        android:text="@string/text_modificar"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
-    <EditText
-        android:id="@+id/et_nombreAgregar7"
+    <Button
+        android:id="@+id/btn_AgregarCliente"
         android:layout_width="250dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="75dp"
-        android:background="@drawable/etfondo"
-        android:ems="10"
-        android:hint="   DNI"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_nombreAgregar4" />
-
-    <EditText
-        android:id="@+id/et_nombreAgregar9"
-        android:layout_width="250dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="75dp"
-        android:background="@drawable/etfondo"
-        android:ems="10"
-        android:hint="   DNO"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_nombreAgregar8" />
-
-    <EditText
-        android:id="@+id/et_nombreAgregar8"
-        android:layout_width="250dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="75dp"
-        android:background="@drawable/etfondo"
-        android:ems="10"
-        android:hint="   Super DNI"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_nombreAgregar7" />
-
-    <EditText
-        android:id="@+id/et_nombreAgregar2"
-        android:layout_width="250dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="71dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="72dp"
-        android:background="@drawable/etfondo"
-        android:ems="10"
-        android:hint="   Apellido paterno"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_nombreAgregar" />
-
-    <EditText
-        android:id="@+id/et_nombreAgregar6"
-        android:layout_width="250dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="71dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="72dp"
-        android:background="@drawable/etfondo"
-        android:ems="10"
-        android:hint="   Direccion"
-        android:inputType="textAutoCorrect"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_nombreAgregar5" />
-
-    <EditText
-        android:id="@+id/et_nombreAgregar5"
-        android:layout_width="250dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="71dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="72dp"
-        android:background="@drawable/etfondo"
-        android:ems="10"
-        android:hint="   Fecha de nacimiento"
-        android:inputType="date"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_nombreAgregar3" />
-
-    <EditText
-        android:id="@+id/et_nombreAgregar3"
-        android:layout_width="250dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="73dp"
-        android:background="@drawable/etfondo"
-        android:ems="10"
-        android:hint="   Apellido materno"
-        android:inputType="textPersonName"
+        android:fontFamily="@font/montserrat"
+        android:onClick="registroBtn"
+        android:text="@string/text_agregar"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_nombreAgregar2" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <Button
+        android:id="@+id/btn_EliminarCliente"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="73dp"
+        android:fontFamily="@font/montserrat"
+        android:onClick="eliminarCliente"
+        android:text="@string/text_eliminar"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="257dp"
         android:layout_height="66dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_nombreAgregar6">
+        app:layout_constraintTop_toBottomOf="@+id/et_Renta_max">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/rb_flat"
             android:layout_width="match_parent"
             android:layout_height="32dp"
-            android:text="Masculino" />
+            android:text="@string/text_flat" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/rb_house"
             android:layout_width="match_parent"
             android:layout_height="33dp"
-            android:text="Femenino" />
+            android:text="@string/text_house" />
     </RadioGroup>
+
+    <EditText
+        android:id="@+id/et_telefonoAgregar"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="72dp"
+        android:background="@drawable/etfondo"
+        android:digits="1234567890"
+        android:ems="10"
+        android:hint="@string/text_tel"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_apellidos" />
+
+    <EditText
+        android:id="@+id/et_apellidos"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="73dp"
+        android:background="@drawable/etfondo"
+        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:ems="10"
+        android:hint="@string/text_ap"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_nombreAgregar" />
+
+    <EditText
+        android:id="@+id/et_Renta_max"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="72dp"
+        android:background="@drawable/etfondo"
+        android:digits="1234567890"
+        android:ems="10"
+        android:hint="@string/text_rmax"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_telefonoAgregar" />
+
+    <EditText
+        android:id="@+id/et_nombreAgregar"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="72dp"
+        android:background="@drawable/etfondo"
+        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:ems="10"
+        android:hint="@string/hint_Nombre"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_clientNO" />
 
     <TextView
         android:id="@+id/lbl_usuario3"
@@ -190,38 +247,22 @@
         android:background="@drawable/usuario"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintStart_toEndOf="@+id/lbl_titulo"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/lbl_titulo"
         android:layout_width="226dp"
         android:layout_height="37dp"
         android:layout_marginStart="44dp"
         android:layout_marginTop="28dp"
         android:fontFamily="@font/montserrat"
-        android:text="Agregar Empleado"
+        android:text="@string/text_agregarEm"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/lbl_RegresarAgregar"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="69dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="73dp"
-        android:fontFamily="@font/montserrat"
-        android:text="Agregar"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_nombreAgregar9" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

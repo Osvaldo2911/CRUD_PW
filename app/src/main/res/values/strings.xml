@@ -1,15 +1,48 @@
 <resources>
     <string name="app_name">CRUD_TBD</string>
 
+
     <string name="lbl_logoNombre">AMPRICE</string>
     <string name="lbl_nombreLogin">LOGIN</string>
+
+
     <string name="hint_Email">Correo electronico</string>
     <string name="hint_Contra">Contraseña</string>
-    <string name="btn_IniciarSesion">Iniciar Sesion</string>
     <string name="rb_recordar">Recordarme</string>
     <string name="lbl_olvide">Olvidaste tu contraseña?</string>
+    <string name="btn_IniciarSesion">Iniciar Sesion</string>
     <string name="lbl_crear">Crea una cuenta</string>
-    <string name="title_activity_inicio">Activity_Inicio</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+
+    <string name="hint_Nombre">Nombre</string>
+    <string name="text_Terminos">Terminos y condiciones</string>
+    <string name="text_registrar">Registrar</string>
+    <string name="text_cuenta">Ya tienes una cuenta?</string>
+    <string name="signUp">Sign up</string>
+
+    <string name="hint_buscar">Buscar</string>
+    <string name="text_bienvenido">BIENVENIDO</string>
+    <string name="text_tabla">Tabla de datos</string>
+    <string name="text_historialR">Historial de registros</string>
+    <string name="text_horasT">Horas trabajadas</string>
+
+    <string name="text_filtro">Filtros</string>
+    <string name="text_ap">Apellidos</string>
+    <string name="text_clNo">ClienteNo</string>
+    <string name="text_tel">Numero de telefono</string>
+    <string name="text_rmax">Renta maxima</string>
+    <string name="text_ptype">prefType</string>
+
+    <string name="hint_clID">ClienteID</string>
+    <string name="text_flat">Flat</string>
+    <string name="text_house">House</string>
+    <string name="text_agregar">Agregar</string>
+    <string name="text_eliminar">Eliminar</string>
+    <string name="text_modificar">Modificar</string>
+    <string name="text_agregarEm">Agregar Empleado</string>
+
+
+
+
+
 </resources>
