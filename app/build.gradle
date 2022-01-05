@@ -6,7 +6,7 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.example.crud_tbd"
+        applicationId "com.example.crud_pw"
         minSdk 30
         targetSdk 31
         versionCode 1
