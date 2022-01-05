@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CRUD_TBD</string>
+    <string name="app_name">CRUD_PW</string>
 
 
     <string name="lbl_logoNombre">AMPRICE</string>
@@ -27,15 +27,15 @@
     <string name="text_horasT">Horas trabajadas</string>
 
     <string name="text_filtro">Filtros</string>
-    <string name="text_ap">Apellidos</string>
-    <string name="text_clNo">ClienteNo</string>
-    <string name="text_tel">Numero de telefono</string>
-    <string name="text_rmax">Renta maxima</string>
-    <string name="text_ptype">prefType</string>
+    <string name="text_ap">Apellido</string>
+    <string name="text_clNo">Emp_No</string>
+    <string name="text_tel">Fecha de Nacimiento</string>
+    <string name="text_rmax">Fecha laboral</string>
+    <string name="text_ptype">Sexo</string>
 
-    <string name="hint_clID">ClienteID</string>
-    <string name="text_flat">Flat</string>
-    <string name="text_house">House</string>
+    <string name="hint_clID">Emp_No</string>
+    <string name="text_flat">Hombre</string>
+    <string name="text_house">Mujer</string>
     <string name="text_agregar">Agregar</string>
     <string name="text_eliminar">Eliminar</string>
     <string name="text_modificar">Modificar</string>
